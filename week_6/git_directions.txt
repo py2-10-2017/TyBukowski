@@ -1,0 +1,14 @@
+anything changes
+DO NOT DO WORK ON MASTER
+git checkout django  #git checkout -b (branchname) optional to create and switch
+DO WORK
+git add * 
+git commit
+git checkout master # note no '-b'
+--fetch if others work 
+--merge others work into master
+--checkout django
+--rebase django against master
+--checkout master
+git merge django
+git push origin master

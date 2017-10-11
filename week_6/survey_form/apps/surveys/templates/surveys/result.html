@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey Results</title>
+    </head>
+    <body>
+        <header>
+            <h1>Submitted Info</h1>
+            <h3>Thanks for submitting this form! You have submitted this form {{ request.session.counter }} times now.</h3>
+        </header>
+        <p>Name: {{ name }}  </p> 
+        <p>Dojo Location: {{ dojo_location }}  </p>
+        <p>Favorite Language: {{ fav_language }}  </p>
+        <p>Comments: {{ comment }}  </p>
+        <br><br>
+        <form action="survey.html" method="GET">
+            <button formaction= {% url 'survey' %}>Dojo Survey</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey</title>
+    </head>
+    <body>
+        <div id=wrapper>
+            <h1>DOJO SURVEY</h1>
+            <Form action={% url 'process' %} method="POST">
+                {% csrf_token %}
+                Your Name: <input type="text" name="name"><br><br> 
+                Dojo Location: <select name="dojo_location" id="location_dropdown">
+                    <option value="Silicon Valley">Silicon Valley</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Washington DC">Washington DC</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Tulsa">Tulsa</option>
+                </select><br><br>        
+                Favorite Language: <select name="fav_language" id="language_dropdown">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="SQL">SQL</option>
+                    <option value="Java">Java</option>
+                    <option value="c#">C#</option>
+                    <option value="Python">Python</option>
+                    <option value="C++">C++</option>
+                    <option value="PHP">PHP</option>
+                    <option value="iOS">iOS</option>
+                    <option value="Ruby">Ruby</option>
+                </select> 
+                <hr>
+                Comment (optional)<br>
+                <textarea name="comment" id="survey_comments" cols="50" rows="10"></textarea><br>
+                <input type="submit" value="submit">
+            </Form>
+        </div>
+    </body>
+</html>
